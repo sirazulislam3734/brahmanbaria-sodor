@@ -206,7 +206,7 @@ export default function AdminPage() {
                   type="text"
                   value={loginData.username}
                   onChange={(e) => setLoginData({ ...loginData, username: e.target.value })}
-                  placeholder="admin"
+                  placeholder="Enter your username"
                   required
                   disabled={isLoading}
                 />
@@ -218,7 +218,7 @@ export default function AdminPage() {
                   type="password"
                   value={loginData.password}
                   onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}
-                  placeholder="admin123"
+                  placeholder="Enter your password"
                   required
                   disabled={isLoading}
                 />
@@ -227,7 +227,7 @@ export default function AdminPage() {
                 {isLoading ? "লগইন হচ্ছে..." : "লগইন করুন"}
               </Button>
             </form>
-            <div className="mt-4 p-3 bg-blue-50 rounded-lg">
+            {/* <div className="mt-4 p-3 bg-blue-50 rounded-lg">
               <p className="text-sm text-blue-700">
                 <strong>ডেমো লগইন:</strong>
                 <br />
@@ -235,7 +235,7 @@ export default function AdminPage() {
                 <br />
                 পাসওয়ার্ড: admin123
               </p>
-            </div>
+            </div> */}
             <div className="mt-4 text-center">
               <Button variant="outline" asChild>
                 <Link href="/">
