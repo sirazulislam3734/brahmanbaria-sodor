@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { FileText, Shield, Users, ArrowRight, Phone, Mail, MapPin } from "lucide-react"
 import { initializeData, getSuccessStories, getGalleryItems, type SuccessStory, type GalleryItem } from "@/lib/storage"
+import AutoCarousel from "@/components/AutoCarousel"
 
 export default function HomePage() {
   const [successStories, setSuccessStories] = useState<SuccessStory[]>([])
@@ -52,30 +53,7 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
-            আপনার কণ্ঠস্বর <span className="text-green-600">শুনুন</span>
-          </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            স্বচ্ছতা ও জবাবদিহিতার মাধ্যমে একটি উন্নত সমাজ গড়ে তুলুন। আপনার অভিযোগ ও গোপন তথ্য নিরাপদে জমা দিন।
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-green-600 hover:bg-green-700">
-              <Link href="/complaint">
-                <FileText className="w-5 h-5 mr-2" />
-                অভিযোগ জানান
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/spot-info">
-                <Shield className="w-5 h-5 mr-2" />
-                গোপন তথ্য দিন
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <AutoCarousel />
 
       {/* Features Section */}
       <section className="py-16 px-4 bg-white">
